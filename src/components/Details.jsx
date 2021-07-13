@@ -13,9 +13,9 @@ export default function Details() {
       const res = await axios.get(`${URL}/${id}`, { headers })
       console.log(res)
       setMedia(res.data)
-      // if ({ media.fields.netflixOrHulu } === 1) {
+      // if ({ media.fields.netflixOrHulu } == 1) {
       //   setStreaming("Available on Netflix")
-      // } else if ({ media.fields.netflixOrHulu } === 2) {
+      // } else if ({ media.fields.netflixOrHulu } == 2) {
       //   setStreaming("Available on Hulu")
       // }
     }
