@@ -24,7 +24,7 @@ function App() {
       <Route path="/add-new">
         <AddNew />
       </Route>
-      <Route>
+      <Route path="/:id">
         <Details />
       </Route>
       <Footer />
