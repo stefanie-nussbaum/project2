@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
     <div>
-      <h1>Watch Party</h1>
+      <Link to="/">
+        <h1>Watch Party</h1>
+      </Link>
       <Link to="/movies">
         Movies
       </Link>
