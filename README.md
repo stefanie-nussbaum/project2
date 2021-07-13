@@ -19,8 +19,6 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 
 ## API and Data Sample
 
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
-
 ```json
 {
     "id": "reccniENsTeNmZrlZ",
@@ -39,8 +37,6 @@ Show us a snippet of JSON returned by your Airtable (you can find it under the A
 ```
 
 ### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
 
