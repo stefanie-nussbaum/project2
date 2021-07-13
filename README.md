@@ -11,8 +11,11 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 ## Wireframes
 ![Wireframe - Home Desktop](https://user-images.githubusercontent.com/85084394/125379736-aaf7ef00-e356-11eb-81c6-10598c103fda.png)
 ![Wireframe - Details Desktop](https://user-images.githubusercontent.com/85084394/125379800-ca8f1780-e356-11eb-83f3-05f4c5a9c07e.png)
+![WireFrame - Add New Desktop](https://user-images.githubusercontent.com/85084394/125459524-0f8d9c56-0858-4f90-b6e5-bbc82384d4a0.png)
 ![Wireframe - Home Mobile](https://user-images.githubusercontent.com/85084394/125379837-da0e6080-e356-11eb-9570-3d99dd8ed055.png)
 ![Wireframe - Details Mobile](https://user-images.githubusercontent.com/85084394/125379854-e5618c00-e356-11eb-98e6-f979c3632df3.png)
+![Wireframe - Add New Mobile](https://user-images.githubusercontent.com/85084394/125459477-bfed7311-815e-49ec-881f-3c49c72f290d.png)
+
 
 ## Component Hierarchy
 ![Component Structure](https://user-images.githubusercontent.com/85084394/125381173-0fb44900-e359-11eb-9a85-e8a79a1e3bed.png)
