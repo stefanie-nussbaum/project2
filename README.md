@@ -54,7 +54,7 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 
 - Add loading animations
 - Give user indication that they have successfully added an item
-- use 3rd party api for a movie or show search feature (and ability to add to watchlist?)
+- Give user ability to delete or check off items
 
 ## Project Schedule
 
@@ -65,39 +65,44 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 |July 14| Core App Structure / build out components | Incomplete
 |July 15| All routing and linking / get and post requests / render to page | Incomplete
 |July 16| Style all components | Incomplete
-|July 19| Additional Styling / RMVP | Incomplete
+|July 19| Additional Styling / Post MVP | Incomplete
 |July 20| Presentations | Incomplete
 
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create app structure | H | 1rs| 0hrs | 0hrs |
+| Create app structure | H | 1hrs| 0hrs | 0hrs |
 | Get airtable info and keys established | H | 2hrs| 0hrs | 0hrs |
 | Create some starting Airtable data | M | 2hrs| 0hrs | 0hrs |
 | Create component files | H | 0.5hrs | 0hrs | 0hrs |
-| set up browser router/link capability | H | 0.5hrs | 0hrs | 0hrs |
+| Set up browser router/link capability | H | 0.5hrs | 0hrs | 0hrs |
 | Populate and link components | H | 2hrs| 0hrs | 0hrs |
 | Successful get request of data | H | 2hrs| 0hrs | 0hrs |
 | Render data from get request to the page | H | 2hrs| 0hrs | 0hrs |
 | Filter movie data | H | 2hrs| 0hrs | 0hrs |
 | Filter show data | H | 2hrs| 0hrs | 0hrs |
-| create submit form component | H | 1rs| 0hrs | 0hrs |
-| Successful post request to data | H | 1rs| 0hrs | 0hrs |
-| Style navbar/header | M | 3rs| 0hrs | 0hrs |
-| Style movie component | M | 3rs| 0hrs | 0hrs |
-| Style lists of shows/movies | M | 3rs| 0hrs | 0hrs |
-| Responsive Design | H | 3rs| 0hrs | 0hrs |
-| loading animations | L | 2rs| 0hrs | 0hrs |
-| indication of successful new item creation | L | 3rs| 0hrs | 0hrs |
-| Total | H | 35hrs | 0hrs | 0hrs |
+| create submit form component | H | 1hrs| 0hrs | 0hrs |
+| Successful post request to data | H | 1hrs| 0hrs | 0hrs |
+| Style navbar/header | M | 3hrs| 0hrs | 0hrs |
+| Style movie component | M | 3hrs| 0hrs | 0hrs |
+| Style lists of shows/movies | M | 3hrs| 0hrs | 0hrs |
+| Responsive Design | H | 3hrs| 0hrs | 0hrs |
+| Loading animations | L | 2hrs| 0hrs | 0hrs |
+| Indication of successful new item creation | L | 3hrs| 0hrs | 0hrs |
+| Delete feature | L | 2hrs| 0hrs | 0hrs |
+| Total | H | 37hrs | 0hrs | 0hrs |
 
 ## SWOT Analysis
 
 ### Strengths:
+I feel like I have a good grasp on all the basics and setup of a React application so I expect to be able to accomplish this part easily.
 
 ### Weaknesses:
+I have the least practice with styling in CSS and it is usually the hardest part for me so this will likely take the most time and be difficult for me. 
 
 ### Opportunities:
+I am excited to build my own React app from scratch because I have actually really grown to like React a lot. I am also excited to be able to show off what I've learned and even learn something new in my post MVP goal of letting the user know a post is successful.
 
 ### Threats:
+I have a tendency to just keep working at a problem until I can figure it out so I will need to watch my time management and make myself take breaks while working on this project.
