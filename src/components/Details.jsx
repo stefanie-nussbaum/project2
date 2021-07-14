@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { URL, headers } from "../services"
 
 export default function Details() {
@@ -13,15 +13,30 @@ export default function Details() {
       const res = await axios.get(`${URL}/${id}`, { headers })
       console.log(res)
       setMedia(res.data)
-      // if ({ media.fields.netflixOrHulu } == 1) {
-      //   setStreaming("Available on Netflix")
-      // } else if ({ media.fields.netflixOrHulu } == 2) {
-      //   setStreaming("Available on Hulu")
-      // }
+      console.log(media)
+      // setStreaming(
+      //   if ({ media.fields.netflixOrHulu } == 1) {
+      //     return "Available on Netflix"
+      //   } else if ({ media.fields.netflixOrHulu }) {
+      //     return
+      //   }
+      // )
+      if (media.fields.netflixOrHulu == 1) {
+        setStreaming("Available on Netflix")
+      } else if (media.fields.netflixOrHulu == 2) {
+        setStreaming("Available on Hulu")
+      }
     }
     fetchMedia()
-  }, [id])
+  }, [])
 
+  // const streamService = () => {
+  //     if ( media.fields.netflixOrHulu  == 1) {
+  //       setStreaming("Available on Netflix")
+  //     } else if ({ media.fields.netflixOrHulu } == 2) {
+  //       setStreaming("Available on Hulu")
+  //     }
+  //   }
 
 
   return (
@@ -31,6 +46,9 @@ export default function Details() {
       <p>{media.fields?.year}</p>
       <p>{media.fields?.genre}</p>
       <p>{streaming}</p>
+      <Link to={media.fields?.imdbLink}>
+        <button>See More</button>
+      </Link>
     </div>
   )
 }

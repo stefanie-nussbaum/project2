@@ -20,7 +20,7 @@ export default function Home() {
       <h2>Watchlist</h2>
       {multimedia.map(media => {
         return (
-          <div className="container">
+          <div key={media.id} className="container">
             <MediaCard key={media.id} media={media} />
           </div>
         )
