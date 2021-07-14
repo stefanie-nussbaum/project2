@@ -4,12 +4,12 @@ import { URL, headers } from "../services"
 import MediaCard from './MediaCard'
 
 export default function Movies() {
-  const [movie, setMovie] = useState({})
+  const [movies, setMovies] = useState([])
 
   useEffect(() => {
     const fetchMovies = async () => {
       const res = await axios.get(URL, { headers })
-      setMovie(res.data.records.filter(movie => {
+      setMovies(res.data.records.filter(movie => {
         if (movie.fields.movie) {
           return movie
         }
@@ -21,7 +21,10 @@ export default function Movies() {
 
   return (
     <div>
-      <MediaCard key={movie.id} media={movie} />
+      {movies.map(movie => {
+        return <MediaCard key={movie.id} media={movie} />
+      })}
+
     </div>
   )
 }
