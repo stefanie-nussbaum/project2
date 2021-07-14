@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import DropdownGenre from './DropdownGenre'
+import { URL, headers } from "../services"
+import axios from 'axios'
 
 const defaultInput = {
   title: "",
@@ -8,7 +10,7 @@ const defaultInput = {
   poster: "",
   imdbLink: "",
   netflixOrHulu: "0",
-  movie: true,
+  // movie: true,
 }
 
 export default function AddNew() {
@@ -20,12 +22,18 @@ export default function AddNew() {
       ...prevInput,
       [name]: value,
     }))
+    console.log(input)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await axios.post(URL, { fields: input }, { headers })
   }
 
   return (
     <div>
       <h3>Add New Movie or Show</h3>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Title:</label>
         <br />
         <input
@@ -46,11 +54,24 @@ export default function AddNew() {
         <br />
         <label>Genre:</label>
         <br />
-        <DropdownGenre
+        <select
+          type="text"
           name="genre"
           value={input.genre}
           onChange={handleChange}
-        />
+        >
+          <option selected value="" ></option>
+          <option value="action" >Action</option>
+          <option value="animation" >Animation</option>
+          <option value="drama" >Drama</option>
+          <option value="comedy" >Comedy</option>
+          <option value="fantasy" >Fantasy</option>
+          <option value="horror" >Horror</option>
+          <option value="romance" >Romance</option>
+          <option value="sci-fi" >Sci-fi</option>
+          <option value="thriller" >Thriller</option>
+          <option value="other" >Other</option>
+        </select>
         <br />
         <label>Poster URL:</label>
         <br />
@@ -70,6 +91,16 @@ export default function AddNew() {
           onChange={handleChange}
         />
         <br />
+        <label>Available for Streaming on:</label>
+        <br />
+        <label>Netflix:</label>
+        <input type="checkbox" name="netflixOrHulu" value="1" onChange={handleChange} />
+        <label>Hulu:</label>
+        <input type="checkbox" name="netflixOrHulu" value="2" onChange={handleChange} />
+        <label>Niether:</label>
+        <input type="checkbox" name="netflixOrHulu" value="0" onChange={handleChange} />
+        <br />
+        <button type="submit">Add</button>
       </form>
     </div>
   )

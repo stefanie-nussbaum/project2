@@ -4,6 +4,7 @@ export default function DropdownGenre() {
   return (
     <div>
       <select>
+        <option value=""></option>
         <option value="action">Action</option>
         <option value="animation">Animation</option>
         <option value="drama">Drama</option>
