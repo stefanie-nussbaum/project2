@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import DropdownGenre from './DropdownGenre'
 
 const defaultInput = {
   title: "",
@@ -45,8 +46,7 @@ export default function AddNew() {
         <br />
         <label>Genre:</label>
         <br />
-        <input
-          type="text"
+        <DropdownGenre
           name="genre"
           value={input.genre}
           onChange={handleChange}
