@@ -22,7 +22,11 @@ export default function Movies() {
   return (
     <div>
       {movies.map(movie => {
-        return <MediaCard key={movie.id} media={movie} />
+        return (
+          <div className="container">
+            <MediaCard key={movie.id} media={movie} />
+          </div>
+        )
       })}
 
     </div>

@@ -16,11 +16,13 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div className="container">
       <h2>Watchlist</h2>
       {multimedia.map(media => {
         return (
-          <MediaCard key={media.id} media={media} />
+          <div className="container">
+            <MediaCard key={media.id} media={media} />
+          </div>
         )
       })}
     </div>

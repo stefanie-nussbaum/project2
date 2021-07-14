@@ -23,7 +23,11 @@ export default function Shows() {
     <div>
       Shows
       {shows.map(show => {
-        return <MediaCard key={show.id} media={show} />
+        return (
+          <div className="container">
+            <MediaCard key={show.id} media={show} />
+          </div>
+        )
       })}
     </div>
   )
