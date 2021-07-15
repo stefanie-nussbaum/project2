@@ -1,9 +1,9 @@
 body {
   /* background-image: url(https://digidezine.com/wp-content/uploads/revslider/agency-sparta-animated1/4-25_mini_mini2.jpg); */
-  background: black;
+  background: rgb(56, 56, 56);
   background-position: center;
   background-attachment: fixed;
-  color: rgb(254, 255, 192);
+  color: white;
 }
 
 h1,
@@ -15,8 +15,18 @@ h4 {
   align-items: center;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 nav {
-  background-image: url(https://wallpapercave.com/wp/wp1896113.jpg);
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 20px;
 }
 
 img {
@@ -41,6 +51,14 @@ label {
 
 input {
   display: flex;
+}
+
+.nav {
+  background-color: rgb(73, 44, 93);
+  display: flex;
+  flex-direction: row;
+  color: white;
+  /* background-image: url(https://wallpapercave.com/wp/wp1896113.jpg); */
 }
 
 .checkboxes {

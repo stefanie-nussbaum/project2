@@ -21,10 +21,10 @@ function App() {
       <Route path="/shows">
         <Shows />
       </Route>
-      <Route path="/add-new">
+      <Route exact path="/add-new">
         <AddNew />
       </Route>
-      <Route path="/:id">
+      <Route exact path="/:id">
         <Details />
       </Route>
       <Footer />

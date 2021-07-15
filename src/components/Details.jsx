@@ -14,31 +14,41 @@ export default function Details() {
       console.log(res)
       setMedia(res.data)
       console.log(media)
-      // setStreaming(
-      //   if ({ media.fields.netflixOrHulu } == 1) {
-      //     return "Available on Netflix"
-      //   } else if ({ media.fields.netflixOrHulu }) {
-      //     return
-      //   }
-      // )
-      if (media.fields.netflixOrHulu === "1") {
-        setStreaming("Available on Netflix")
-      } else if (media.fields.netflixOrHulu === "2") {
-        setStreaming("Available on Hulu")
-      }
+      // streamingFunction(media)
+
     }
     fetchMedia()
+    // streamingFunction()
   }, [])
+
+  // useEffect(() => {
+  //   if (media.fields.netflixOrHulu == "1") {
+  //     setStreaming("Available on Netflix")
+  //   } else if (media.fields.netflixOrHulu == "2") {
+  //     setStreaming("Available on Hulu")
+  //   }
+  // }, [media])
+
+  const streamingFunction = () => {
+    if (media.fields.netflixOrHulu == "1") {
+      setStreaming("Available on Netflix")
+    } else if (media.fields.netflixOrHulu == "2") {
+      setStreaming("Available on Hulu")
+    }
+  }
 
 
   return (
-    <div>
-      <img src={media.fields?.poster} />
-      <h2>{media.fields?.title}</h2>
-      <p>{media.fields?.year}</p>
-      <p>{media.fields?.genre}</p>
-      <p>{streaming}</p>
-      <button>See More</button>
+    <div className="container">
+      <div className="card">
+        <img src={media.fields?.poster} />
+        <h2>{media.fields?.title}</h2>
+        <p>{media.fields?.year}</p>
+        <p>{media.fields?.genre}</p>
+        <p>{streaming}</p>
+        <button>See More</button>
+      </div>
+
     </div>
   )
 }
