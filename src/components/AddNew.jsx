@@ -10,7 +10,7 @@ const defaultInput = {
   poster: "",
   imdbLink: "",
   netflixOrHulu: "0",
-  // movie: true,
+  // movie: null,
 }
 
 export default function AddNew() {

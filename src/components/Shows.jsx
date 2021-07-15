@@ -10,7 +10,7 @@ export default function Shows() {
     const fetchShows = async () => {
       const res = await axios.get(URL, { headers })
       setShows(res.data.records.filter(show => {
-        if (!show.fields.movie) {
+        if (show.fields.movie === "false") {
           return show
         }
         return null

@@ -46,9 +46,7 @@ export default function Details() {
       <p>{media.fields?.year}</p>
       <p>{media.fields?.genre}</p>
       <p>{streaming}</p>
-      <Link to={media.fields?.imdbLink}>
-        <button>See More</button>
-      </Link>
+      <button>See More</button>
     </div>
   )
 }

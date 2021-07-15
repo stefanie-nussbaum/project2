@@ -10,7 +10,7 @@ export default function Movies() {
     const fetchMovies = async () => {
       const res = await axios.get(URL, { headers })
       setMovies(res.data.records.filter(movie => {
-        if (movie.fields.movie) {
+        if (movie.fields.movie === "true") {
           return movie
         }
         return null
