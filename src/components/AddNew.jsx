@@ -6,7 +6,7 @@ import axios from 'axios'
 const defaultInput = {
   title: "",
   year: "",
-  genre: "",
+  genre: null,
   poster: "",
   imdbLink: "",
   netflixOrHulu: "0",
@@ -18,6 +18,7 @@ export default function AddNew() {
 
   const handleChange = (e) => {
     const { name, value } = e.target
+
     setInput(prevInput => ({
       ...prevInput,
       [name]: value,
@@ -27,6 +28,7 @@ export default function AddNew() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
     const res = await axios.post(URL, { fields: input }, { headers })
   }
 
@@ -34,33 +36,47 @@ export default function AddNew() {
     <div>
       <h3>Add New Movie or Show</h3>
       <form onSubmit={handleSubmit}>
-        <label>Title:</label>
+        <label>Type:</label>
+        <br />
+        <div className="checkboxes">
+          <label>Movie</label>
+          <input type="checkbox" name="movie" value="true" onChange={handleChange} />
+          <label>Show</label>
+          <input type="checkbox" name="movie" value="false" onChange={handleChange} />
+        </div>
+
+        <br />
+        {/* <label>Title:</label> */}
         <br />
         <input
           type="text"
           name="title"
           value={input.title}
           onChange={handleChange}
+          placeholder="Title"
         />
         <br />
-        <label>Year:</label>
+        {/* <label>Year:</label> */}
         <br />
         <input
           type="text"
           name="year"
           value={input.year}
           onChange={handleChange}
+          placeholder="Year"
         />
         <br />
-        <label>Genre:</label>
+        {/* <label>Genre:</label> */}
         <br />
         <select
           type="text"
           name="genre"
-          value={input.genre}
+          value="genre"
+          defaultValue="genre"
           onChange={handleChange}
+          placeholder="genre"
         >
-          <option selected value="" ></option>
+          <option value="genre" disabled >Genre</option>
           <option value="action" >Action</option>
           <option value="animation" >Animation</option>
           <option value="drama" >Drama</option>
@@ -73,32 +89,36 @@ export default function AddNew() {
           <option value="other" >Other</option>
         </select>
         <br />
-        <label>Poster URL:</label>
+        {/* <label>Poster URL:</label> */}
         <br />
         <input
           type="text"
           name="poster"
           value={input.poster}
           onChange={handleChange}
+          placeholder="Poster url"
         />
         <br />
-        <label>IMDB Link:</label>
+        {/* <label>IMDB Link:</label> */}
         <br />
         <input
           type="text"
           name="imdbLink"
           value={input.imdbLink}
           onChange={handleChange}
+          placeholder="IMDB Link"
         />
         <br />
         <label>Available for Streaming on:</label>
         <br />
-        <label>Netflix:</label>
-        <input type="checkbox" name="netflixOrHulu" value="1" onChange={handleChange} />
-        <label>Hulu:</label>
-        <input type="checkbox" name="netflixOrHulu" value="2" onChange={handleChange} />
-        <label>Niether:</label>
-        <input type="checkbox" name="netflixOrHulu" value="0" onChange={handleChange} />
+        <div className="checkboxes">
+          <label>Netflix</label>
+          <input type="checkbox" name="netflixOrHulu" value="1" onChange={handleChange} />
+          <label>Hulu</label>
+          <input type="checkbox" name="netflixOrHulu" value="2" onChange={handleChange} />
+          <label>Niether</label>
+          <input type="checkbox" name="netflixOrHulu" value="0" onChange={handleChange} />
+        </div>
         <br />
         <button type="submit">Add</button>
       </form>

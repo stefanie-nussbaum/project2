@@ -1,12 +1,47 @@
+body {
+  /* background-image: url(https://digidezine.com/wp-content/uploads/revslider/agency-sparta-animated1/4-25_mini_mini2.jpg); */
+  background: black;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgb(254, 255, 192);
+}
+
+nav {
+  background-image: url(https://wallpapercave.com/wp/wp1896113.jpg);
+}
+
 img {
   height: 300px;
   width: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  width: 190px;
+}
+
+label {
+  display: flex;
+  margin-left: 15px;
+}
+
+input {
+  display: flex;
 }
 
 /* div {
   display: flex;
   align-items: center;
 } */
+
+.checkboxes {
+  display: flex;
+}
 
 .container div {
   display: flex;
