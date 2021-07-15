@@ -63,7 +63,7 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 | July 10-12 | Prompt / Wireframes / Priority Matrix / Timeframes               | Complete   |
 | July 13    | Project Approval                                                 | Complete   |
 | July 14    | Core App Structure / build out components                        | Complete   |
-| July 15    | All routing and linking / get and post requests / render to page | Incomplete |
+| July 15    | All routing and linking / get and post requests / render to page | Complete   |
 | July 16    | Style all components                                             | Incomplete |
 | July 19    | Additional Styling / Post MVP                                    | Incomplete |
 | July 20    | Presentations                                                    | Incomplete |
@@ -74,24 +74,24 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 | ------------------------------------------ | :------: | :------------: | :-----------: | :---------: |
 | Create app structure                       |    H     |      1hrs      |    0.5hrs     |   0.5hrs    |
 | Get airtable info and keys established     |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Create some starting Airtable data         |    M     |      2hrs      |    0.5hrs     |    0hrs     |
+| Create some starting Airtable data         |    M     |      2hrs      |     1hrs      |    0hrs     |
 | Create component files                     |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
 | Set up browser router/link capability      |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
 | Populate and link components               |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
 | Successful get request of data             |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Render data from get request to the page   |    H     |      2hrs      |     1hrs      |    0hrs     |
-| Filter movie data                          |    H     |      2hrs      |     0hrs      |    0hrs     |
-| Filter show data                           |    H     |      2hrs      |     0hrs      |    0hrs     |
-| create submit form component               |    H     |      1hrs      |     0hrs      |    0hrs     |
-| Successful post request to data            |    H     |      1hrs      |     0hrs      |    0hrs     |
+| Render data from get request to the page   |    H     |      2hrs      |     2hrs      |    0hrs     |
+| Filter movie data                          |    H     |      2hrs      |    1.5hrs     |    0hrs     |
+| Filter show data                           |    H     |      2hrs      |    0.5hrs     |    0hrs     |
+| create submit form component               |    H     |      1hrs      |     3hrs      |    0hrs     |
+| Successful post request to data            |    H     |      1hrs      |     1hrs      |    0hrs     |
 | Style navbar/header                        |    M     |      3hrs      |     0hrs      |    0hrs     |
 | Style movie component                      |    M     |      3hrs      |     0hrs      |    0hrs     |
-| Style lists of shows/movies                |    M     |      3hrs      |     0hrs      |    0hrs     |
+| Style lists of shows/movies                |    M     |      3hrs      |     1hrs      |    0hrs     |
 | Responsive Design                          |    H     |      3hrs      |     0hrs      |    0hrs     |
 | Loading animations                         |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Indication of successful new item creation |    L     |      3hrs      |     0hrs      |    0hrs     |
 | Delete feature                             |    L     |      2hrs      |     0hrs      |    0hrs     |
-| Total                                      |    H     |     37hrs      |     0hrs      |    0hrs     |
+| Total                                      |    H     |     37hrs      |     15hrs     |    0hrs     |
 
 ## SWOT Analysis
 
