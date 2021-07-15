@@ -21,14 +21,16 @@ export default function Movies() {
 
   return (
     <div>
-      {movies.map(movie => {
-        return (
-          <div className="container">
-            <MediaCard key={movie.id} media={movie} />
-          </div>
-        )
-      })}
-
+      <h2>Movies</h2>
+      <div className="container">
+        {movies.map(movie => {
+          return (
+            <div className="container">
+              <MediaCard key={movie.id} media={movie} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
