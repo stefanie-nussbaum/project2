@@ -21,14 +21,17 @@ export default function Shows() {
 
   return (
     <div>
-      Shows
-      {shows.map(show => {
-        return (
-          <div className="container">
-            <MediaCard key={show.id} media={show} />
-          </div>
-        )
-      })}
+      <h2>Shows</h2>
+      <div className="container">
+        {shows.map(show => {
+          return (
+            <div >
+              <MediaCard key={show.id} media={show} />
+            </div>
+          )
+        })}
+      </div>
+
     </div>
   )
 }
