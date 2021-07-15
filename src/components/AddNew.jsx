@@ -2,19 +2,32 @@ import React, { useState } from 'react'
 import DropdownGenre from './DropdownGenre'
 import { URL, headers } from "../services"
 import axios from 'axios'
+import Popup from './Popup'
+import { useHistory } from 'react-router-dom'
 
 const defaultInput = {
-  title: "",
-  year: "",
+  title: null,
+  year: null,
   genre: null,
-  poster: "",
-  imdbLink: "",
-  netflixOrHulu: "0",
-  // movie: null,
+  poster: null,
+  imdbLink: null,
+  netflixOrHulu: null,
+  movie: null,
 }
 
 export default function AddNew() {
   const [input, setInput] = useState(defaultInput)
+  const [popup, setPopup] = useState(false)
+  const [message, setMessage] = useState("")
+  const history = useHistory()
+
+  const togglePopup = () => {
+    setPopup(!popup)
+  }
+
+  const closePopup = () => {
+
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -28,8 +41,30 @@ export default function AddNew() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    if (input.title === null) {
+      setMessage("Please enter a title to submit.")
+      togglePopup()
+    } else if (input.year === null) {
+      setMessage("Please enter a year to submit.")
+      togglePopup()
+    } else if (input.genre === null) {
+      setMessage("Please select a genre to submit.")
+      togglePopup()
+    } else if (input.poster === null) {
+      setMessage("Please enter a poster url to submit.")
+      togglePopup()
+    } else if (input.imdbLink === null) {
+      setMessage("Please enter a link to IMDB to submit.")
+      togglePopup()
+    } else if (input.netflixOrHulu === null) {
+      setMessage("Please select streaming availability to submit.")
+      togglePopup()
+    } else if (input.movie === null) {
+      setMessage("Please select either movie or show to submit.")
+      togglePopup()
+    }
     const res = await axios.post(URL, { fields: input }, { headers })
+    history.push("/")
   }
 
   return (
@@ -122,6 +157,7 @@ export default function AddNew() {
         <br />
         <button type="submit">Add</button>
       </form>
+      {popup && <Popup message={<p>{message}</p>} closePopup={togglePopup} />}
     </div>
   )
 }
