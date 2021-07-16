@@ -78,6 +78,18 @@ input {
   width: 200px;
 }
 
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: fixed;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
 .popup {
   position: fixed;
   background: #00000050;

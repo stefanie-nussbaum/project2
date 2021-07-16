@@ -148,11 +148,11 @@ export default function AddNew() {
         <br />
         <div className="checkboxes">
           <label>Netflix</label>
-          <input type="checkbox" name="netflixOrHulu" value="1" onChange={handleChange} />
+          <input type="checkbox" name="netflixOrHulu" value={1} onChange={handleChange} />
           <label>Hulu</label>
-          <input type="checkbox" name="netflixOrHulu" value="2" onChange={handleChange} />
+          <input type="checkbox" name="netflixOrHulu" value={2} onChange={handleChange} />
           <label>Niether</label>
-          <input type="checkbox" name="netflixOrHulu" value="0" onChange={handleChange} />
+          <input type="checkbox" name="netflixOrHulu" value={0} onChange={handleChange} />
         </div>
         <br />
         <button type="submit">Add</button>
