@@ -79,14 +79,14 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 | Set up browser router/link capability      |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
 | Populate and link components               |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
 | Successful get request of data             |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Render data from get request to the page   |    H     |      2hrs      |     2hrs      |    0hrs     |
+| Render data from get request to the page   |    H     |      2hrs      |     3hrs      |    0hrs     |
 | Filter movie data                          |    H     |      2hrs      |    1.5hrs     |    0hrs     |
-| Filter show data                           |    H     |      2hrs      |    0.5hrs     |    0hrs     |
+| Filter show data                           |    H     |      2hrs      |     1hrs      |    0hrs     |
 | create submit form component               |    H     |      1hrs      |     3hrs      |    0hrs     |
 | Successful post request to data            |    H     |      1hrs      |     1hrs      |    0hrs     |
 | Style navbar/header                        |    M     |      3hrs      |     0hrs      |    0hrs     |
-| Style movie component                      |    M     |      3hrs      |     0hrs      |    0hrs     |
-| Style lists of shows/movies                |    M     |      3hrs      |     1hrs      |    0hrs     |
+| Style movie component                      |    M     |      3hrs      |     2hrs      |    0hrs     |
+| Style lists of shows/movies                |    M     |      3hrs      |     2hrs      |    0hrs     |
 | Responsive Design                          |    H     |      3hrs      |     0hrs      |    0hrs     |
 | Loading animations                         |    L     |      2hrs      |     0hrs      |    0hrs     |
 | Indication of successful new item creation |    L     |      3hrs      |     0hrs      |    0hrs     |
