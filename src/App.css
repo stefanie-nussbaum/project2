@@ -13,7 +13,6 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: center;
 }
 
 h1 {
@@ -86,6 +85,14 @@ button {
 
 .card:hover {
   transform: scale(1.2);
+}
+
+.filter-genre {
+  border: rgb(49, 49, 49) solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .footer {

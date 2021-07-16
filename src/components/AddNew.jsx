@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DropdownGenre from './DropdownGenre'
+// import DropdownGenre from './DropdownGenre'
 import { URL, headers } from "../services"
 import axios from 'axios'
 import Popup from './Popup'
@@ -23,10 +23,6 @@ export default function AddNew() {
 
   const togglePopup = () => {
     setPopup(!popup)
-  }
-
-  const closePopup = () => {
-
   }
 
   const handleChange = (e) => {
