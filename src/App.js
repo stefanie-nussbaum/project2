@@ -15,6 +15,9 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
+      <Route path="/watchlist/:id">
+        <Details />
+      </Route>
       <Route path="/movies">
         <Movies />
       </Route>
@@ -24,9 +27,7 @@ function App() {
       <Route exact path="/add-new">
         <AddNew />
       </Route>
-      <Route exact path="/:id">
-        <Details />
-      </Route>
+      
       <Footer />
 
     </div>
