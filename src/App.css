@@ -32,7 +32,8 @@ a {
 
 img {
   height: 300px;
-  width: auto;
+  width: 200px;
+  box-shadow: rgb(40, 40, 40) 10px 10px 5px;
 }
 
 form {
@@ -82,12 +83,22 @@ input {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: fixed;
+  border: rgb(49, 49, 49) solid 2px;
+}
+
+.footer a {
+  margin: 0px 5px;
+}
+
+.footer h3 {
+  margin: 5px 5px;
 }
 
 .icon {
   width: 20px;
   height: 20px;
+  margin: 5px 5px;
+  box-shadow: none;
 }
 
 .popup {
