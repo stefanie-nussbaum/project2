@@ -106,12 +106,12 @@ export default function AddNew() {
         <select
           type="text"
           name="genre"
-          value="genre"
-          defaultValue="genre"
+          // value="genre"
+          // defaultValue="genre"
           onChange={handleChange}
           placeholder="genre"
         >
-          <option value="genre" disabled >Genre</option>
+          <option value="genre" selected disabled >Genre</option>
           <option value="action" >Action</option>
           <option value="animation" >Animation</option>
           <option value="drama" >Drama</option>
