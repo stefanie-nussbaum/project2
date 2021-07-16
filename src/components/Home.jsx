@@ -6,6 +6,8 @@ import MediaCard from './MediaCard'
 
 export default function Home() {
   const [multimedia, setMultimedia] = useState([])
+  const [filteredMedia, setFilteredMedia] = useState([])
+  const [filterInput, setFilterInput] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,11 +17,45 @@ export default function Home() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    setFilteredMedia(multimedia)
+  }, [multimedia])
+
+  useEffect(() => {
+    if (filterInput !== "") {
+      setFilteredMedia(multimedia.filter((media) => {
+        if (media.fields.genre === filterInput) {
+          return media
+        }
+        return null
+      }))
+    } else {
+      setFilteredMedia(multimedia)
+    }
+  }, [filterInput, multimedia])
+
+  const handleChange = (e) => {
+    setFilterInput(e.target.value)
+  }
+
   return (
     <div>
       <h2>Watchlist</h2>
+      <select className="filter-genre" name="genre" value={filterInput} onChange={handleChange} >
+        <option value="genre" selected disabled >Filter by genre...</option>
+        <option value="action" >Action</option>
+        <option value="animation" >Animation</option>
+        <option value="drama" >Drama</option>
+        <option value="comedy" >Comedy</option>
+        <option value="fantasy" >Fantasy</option>
+        <option value="horror" >Horror</option>
+        <option value="romance" >Romance</option>
+        <option value="sci-fi" >Sci-fi</option>
+        <option value="thriller" >Thriller</option>
+        <option value="other" >Other</option>
+      </select>
       <div className="container">
-        {multimedia.map(media => {
+        {filteredMedia.map(media => {
           return (
             <div key={media.id} className="container">
               <MediaCard key={media.id} media={media} />

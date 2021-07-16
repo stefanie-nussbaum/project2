@@ -22,6 +22,7 @@ h1 {
 
 nav {
   display: flex;
+  justify-content: flex-end;
 }
 
 a {
@@ -55,6 +56,10 @@ input {
   display: flex;
 }
 
+button {
+  margin: 10px 10px;
+}
+
 .nav {
   background-color: rgb(40, 40, 40);
   display: flex;
@@ -85,16 +90,20 @@ input {
 
 .footer {
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: center;
   border: rgb(49, 49, 49) solid 2px;
+  /* position: fixed; */
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .footer a {
   margin: 0px 5px;
 }
 
-.footer h3 {
+.footer h4 {
   margin: 5px 5px;
 }
 
