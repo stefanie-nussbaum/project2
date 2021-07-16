@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import { ClipLoader } from 'react-spinners'
 import { URL, headers } from "../services"
 import MediaCard from './MediaCard'
 
@@ -18,6 +19,10 @@ export default function Shows() {
     }
     fetchShows()
   }, [])
+
+  if (shows.length === 0) {
+    return <ClipLoader />
+  }
 
   return (
     <div>

@@ -13,10 +13,14 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-shadow: rgb(30, 30, 30) 3px 3px;
 }
 
 h1 {
   font-size: 50px;
+  text-shadow: none;
+  display: flex;
+  align-items: flex-start;
 }
 
 nav {
@@ -33,7 +37,7 @@ a {
 img {
   height: 300px;
   width: 200px;
-  box-shadow: rgb(40, 40, 40) 10px 10px 5px;
+  box-shadow: rgb(30, 30, 30) 10px 10px 5px;
 }
 
 form {
@@ -88,11 +92,13 @@ button {
 }
 
 .filter-genre {
-  border: rgb(49, 49, 49) solid 1px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   justify-content: flex-end;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
 }
 
 .footer {

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { URL, headers } from "../services"
+import Loading from './Loading'
 import MediaCard from './MediaCard'
 
 export default function Movies() {
@@ -18,6 +19,10 @@ export default function Movies() {
     }
     fetchMovies()
   }, [])
+
+  if (movies.length === 0) {
+    return <Loading />
+  }
 
   return (
     <div>

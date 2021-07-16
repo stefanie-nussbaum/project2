@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { URL, headers } from '../services'
 import MediaCard from './MediaCard'
+import Loading from './Loading'
 
 
 export default function Home() {
@@ -36,6 +37,10 @@ export default function Home() {
 
   const handleChange = (e) => {
     setFilterInput(e.target.value)
+  }
+
+  if (multimedia.length === 0) {
+    return <Loading />
   }
 
   return (
