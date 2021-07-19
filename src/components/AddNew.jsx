@@ -60,6 +60,7 @@ export default function AddNew() {
       togglePopup()
     }
     const res = await axios.post(URL, { fields: input }, { headers })
+    console.log(res)
     history.push("/")
   }
 

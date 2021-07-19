@@ -29,6 +29,7 @@ export default function Details() {
   const handleDelete = async () => {
     const mediaURL = `${URL}/watchlist/${id}`
     const res = await axios.delete(mediaURL, { headers })
+    console.log(res)
     // history.push("/")
   }
 
