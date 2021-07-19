@@ -64,7 +64,7 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 | July 13    | Project Approval                                                 | Complete   |
 | July 14    | Core App Structure / build out components                        | Complete   |
 | July 15    | All routing and linking / get and post requests / render to page | Complete   |
-| July 16    | Style all components                                             | Incomplete |
+| July 16    | Style all components                                             | Complete   |
 | July 19    | Additional Styling / Post MVP                                    | Incomplete |
 | July 20    | Presentations                                                    | Incomplete |
 
@@ -84,13 +84,13 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 | Filter show data                           |    H     |      2hrs      |     1hrs      |    0hrs     |
 | create submit form component               |    H     |      1hrs      |     3hrs      |    0hrs     |
 | Successful post request to data            |    H     |      1hrs      |     1hrs      |    0hrs     |
-| Style navbar/header                        |    M     |      3hrs      |     0hrs      |    0hrs     |
-| Style movie component                      |    M     |      3hrs      |     2hrs      |    0hrs     |
-| Style lists of shows/movies                |    M     |      3hrs      |     2hrs      |    0hrs     |
-| Responsive Design                          |    H     |      3hrs      |     0hrs      |    0hrs     |
-| Loading animations                         |    L     |      2hrs      |     0hrs      |    0hrs     |
+| Style navbar/header                        |    M     |      3hrs      |     2hrs      |    0hrs     |
+| Style movie component                      |    M     |      3hrs      |     3hrs      |    3hrs     |
+| Style lists of shows/movies                |    M     |      3hrs      |     4hrs      |    4hrs     |
+| Responsive Design                          |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Loading animations                         |    L     |      2hrs      |     2hrs      |    2hrs     |
 | Indication of successful new item creation |    L     |      3hrs      |     0hrs      |    0hrs     |
-| Delete feature                             |    L     |      2hrs      |     0hrs      |    0hrs     |
+| Delete feature                             |    L     |      2hrs      |    0.5hrs     |    0hrs     |
 | Total                                      |    H     |     37hrs      |     15hrs     |    0hrs     |
 
 ## SWOT Analysis
