@@ -87,6 +87,15 @@ button {
   width: 200px;
 }
 
+.details {
+  margin: 20px 20px;
+  /* width: 200px; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
 .card:hover {
   transform: scale(1.2);
 }

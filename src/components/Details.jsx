@@ -36,7 +36,7 @@ export default function Details() {
 
   return (
     <div className="container">
-      <div className="card">
+      <div className="details">
         <img src={media.fields?.poster} alt={media.fields?.title} />
         <h2>{media.fields?.title}</h2>
         <p>{media.fields?.year}</p>
@@ -45,7 +45,7 @@ export default function Details() {
         <Link to={{ pathname: `${media.fields?.imdbLink}` }} target="_blank">
           <button>See More</button>
         </Link>
-        <button onClick={handleDelete}>Remove from Watchlist</button>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
   )
