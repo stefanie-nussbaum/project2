@@ -12,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Route exact path="/">
+      <div className="main-content">
+        <Route exact path="/">
         <Home />
       </Route>
       <Route path="/watchlist/:id">
@@ -27,6 +28,8 @@ function App() {
       <Route exact path="/add-new">
         <AddNew />
       </Route>
+      </div>
+      
       
       <Footer />
 

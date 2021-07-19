@@ -48,8 +48,8 @@ export default function Home() {
     <div>
       <h2>Watchlist</h2>
       <div className="container">
-        <select className="filter-genre" name="genre" value={filterInput} onChange={handleChange} >
-          <option value="" selected >Filter by genre...</option>
+        <select className="filter-genre" name="genre" defaultValue={filterInput} onChange={handleChange} >
+          <option value="" >Filter by genre...</option>
           <option value="action" >Action</option>
           <option value="animation" >Animation</option>
           <option value="drama" >Drama</option>

@@ -51,8 +51,8 @@ export default function Movies() {
     <div>
       <h2>Movies</h2>
       <div className="container">
-        <select className="filter-genre" name="genre" value={filterInput} onChange={handleChange} >
-          <option value="" selected >Filter by genre...</option>
+        <select className="filter-genre" name="genre" defaultValue={filterInput} onChange={handleChange} >
+          <option value="" >Filter by genre...</option>
           <option value="action" >Action</option>
           <option value="animation" >Animation</option>
           <option value="drama" >Drama</option>
@@ -68,7 +68,7 @@ export default function Movies() {
       <div className="container">
         {filteredMovies.map(movie => {
           return (
-            <div className="container">
+            <div key={movie.id} className="container">
               <MediaCard key={movie.id} media={movie} />
             </div>
           )

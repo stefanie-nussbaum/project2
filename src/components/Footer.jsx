@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="footer-container">
       <div className="footer">
-        <h4>By Stefanie Nussbaum</h4>
+        <h4>by Stefanie Nussbaum</h4>
         <Link to={{ pathname: "https://github.com/stefanie-nussbaum" }} target="_blank" >
           <img className="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="github" />
         </Link>

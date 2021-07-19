@@ -6,13 +6,13 @@ import Popup from './Popup'
 import { useHistory } from 'react-router-dom'
 
 const defaultInput = {
-  title: null,
-  year: null,
-  genre: null,
-  poster: null,
-  imdbLink: null,
+  title: "",
+  year: "",
+  genre: "",
+  poster: "",
+  imdbLink: "",
   netflixOrHulu: null,
-  movie: null,
+  movie: "",
 }
 
 export default function AddNew() {
@@ -37,31 +37,33 @@ export default function AddNew() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (input.title === null) {
+    if (input.title === "") {
       setMessage("Please enter a title to submit.")
       togglePopup()
-    } else if (input.year === null) {
+    } else if (input.year === "") {
       setMessage("Please enter a year to submit.")
       togglePopup()
-    } else if (input.genre === null) {
+    } else if (input.genre === "") {
       setMessage("Please select a genre to submit.")
       togglePopup()
-    } else if (input.poster === null) {
+    } else if (input.poster === "") {
       setMessage("Please enter a poster url to submit.")
       togglePopup()
-    } else if (input.imdbLink === null) {
+    } else if (input.imdbLink === "") {
       setMessage("Please enter a link to IMDB to submit.")
       togglePopup()
     } else if (input.netflixOrHulu === null) {
       setMessage("Please select streaming availability to submit.")
       togglePopup()
-    } else if (input.movie === null) {
+    } else if (input.movie === "") {
       setMessage("Please select either movie or show to submit.")
       togglePopup()
+    } else {
+      const res = await axios.post(URL, { fields: input }, { headers })
+      console.log(res)
+      history.push("/")
     }
-    const res = await axios.post(URL, { fields: input }, { headers })
-    console.log(res)
-    history.push("/")
+
   }
 
   return (
@@ -104,11 +106,11 @@ export default function AddNew() {
           type="text"
           name="genre"
           // value="genre"
-          // defaultValue="genre"
+          defaultValue=""
           onChange={handleChange}
           placeholder="genre"
         >
-          <option value="genre" selected disabled >Genre</option>
+          <option value='' disabled >Genre</option>
           <option value="action" >Action</option>
           <option value="animation" >Animation</option>
           <option value="drama" >Drama</option>
