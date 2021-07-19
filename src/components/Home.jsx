@@ -16,6 +16,7 @@ export default function Home() {
       setMultimedia(res.data.records)
     }
     fetchData()
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
