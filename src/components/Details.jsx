@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import { URL, headers } from "../services"
 
 export default function Details() {
   const [media, setMedia] = useState({})
   const [streaming, setStreaming] = useState("")
   const { id } = useParams()
+  const history = useHistory()
 
   useEffect(() => {
     const fetchMedia = async () => {
@@ -27,10 +28,10 @@ export default function Details() {
   console.log(media)
 
   const handleDelete = async () => {
-    const mediaURL = `${URL}/watchlist/${id}`
+    const mediaURL = `${URL}/${id}`
     const res = await axios.delete(mediaURL, { headers })
     console.log(res)
-    // history.push("/")
+    history.push("/")
   }
 
 
