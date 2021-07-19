@@ -46,19 +46,21 @@ export default function Home() {
   return (
     <div>
       <h2>Watchlist</h2>
-      <select className="filter-genre" name="genre" value={filterInput} onChange={handleChange} >
-        <option value="" selected >Filter by genre...</option>
-        <option value="action" >Action</option>
-        <option value="animation" >Animation</option>
-        <option value="drama" >Drama</option>
-        <option value="comedy" >Comedy</option>
-        <option value="fantasy" >Fantasy</option>
-        <option value="horror" >Horror</option>
-        <option value="romance" >Romance</option>
-        <option value="sci-fi" >Sci-fi</option>
-        <option value="thriller" >Thriller</option>
-        <option value="other" >Other</option>
-      </select>
+      <div className="container">
+        <select className="filter-genre" name="genre" value={filterInput} onChange={handleChange} >
+          <option value="" selected >Filter by genre...</option>
+          <option value="action" >Action</option>
+          <option value="animation" >Animation</option>
+          <option value="drama" >Drama</option>
+          <option value="comedy" >Comedy</option>
+          <option value="fantasy" >Fantasy</option>
+          <option value="horror" >Horror</option>
+          <option value="romance" >Romance</option>
+          <option value="sci-fi" >Sci-fi</option>
+          <option value="thriller" >Thriller</option>
+          <option value="other" >Other</option>
+        </select>
+      </div>
       <div className="container">
         {filteredMedia.map(media => {
           return (

@@ -11,14 +11,10 @@ export default function Details() {
   useEffect(() => {
     const fetchMedia = async () => {
       const res = await axios.get(`${URL}/${id}`, { headers })
-      console.log(res)
+      // console.log(res)
       setMedia(res.data)
-      console.log(media)
-      // streamingFunction(media)
-
     }
     fetchMedia()
-    // streamingFunction()
   }, [id])
 
   useEffect(() => {
@@ -30,13 +26,11 @@ export default function Details() {
   }, [media])
   console.log(media)
 
-  // const streamingFunction = () => {
-  //   if (media.fields.netflixOrHulu === 1) {
-  //     setStreaming("Available on Netflix")
-  //   } else if (media.fields.netflixOrHulu === 2) {
-  //     setStreaming("Available on Hulu")
-  //   }
-  // }
+  const handleDelete = async () => {
+    const mediaURL = `${URL}/watchlist/${id}`
+    const res = await axios.delete(mediaURL, { headers })
+    // history.push("/")
+  }
 
 
   return (
@@ -50,9 +44,8 @@ export default function Details() {
         <Link to={{ pathname: `${media.fields?.imdbLink}` }} target="_blank">
           <button>See More</button>
         </Link>
-
+        <button onClick={handleDelete}>Remove from Watchlist</button>
       </div>
-
     </div>
   )
 }
