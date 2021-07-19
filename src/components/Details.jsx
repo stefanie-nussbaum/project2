@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import { URL, headers } from "../services"
+import Popup from './Popup'
 
 export default function Details() {
   const [media, setMedia] = useState({})
@@ -12,7 +13,6 @@ export default function Details() {
   useEffect(() => {
     const fetchMedia = async () => {
       const res = await axios.get(`${URL}/${id}`, { headers })
-      // console.log(res)
       setMedia(res.data)
     }
     fetchMedia()
@@ -25,15 +25,16 @@ export default function Details() {
       setStreaming("Available on Hulu")
     }
   }, [media])
-  console.log(media)
 
   const handleDelete = async () => {
     const mediaURL = `${URL}/${id}`
     const res = await axios.delete(mediaURL, { headers })
-    console.log(res)
-    history.push("/")
+    if (res) {
+      history.push("/")
+    } else {
+      return <Popup message="Item was not deleted. Please try again." />
+    }
   }
-
 
   return (
     <div className="container">

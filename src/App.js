@@ -7,32 +7,35 @@ import Movies from "./components/Movies"
 import Shows from './components/Shows'
 import AddNew from "./components/AddNew"
 import Details from "./components/Details"
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Watch Party"
+  }, [])
+
   return (
     <div className="App">
       <Navbar />
       <div className="main-content">
         <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/watchlist/:id">
-        <Details />
-      </Route>
-      <Route path="/movies">
-        <Movies />
-      </Route>
-      <Route path="/shows">
-        <Shows />
-      </Route>
-      <Route exact path="/add-new">
-        <AddNew />
-      </Route>
+          <Home />
+        </Route>
+        <Route path="/watchlist/:id">
+          <Details />
+        </Route>
+        <Route path="/movies">
+          <Movies />
+        </Route>
+        <Route path="/shows">
+          <Shows />
+        </Route>
+        <Route exact path="/add-new">
+          <AddNew />
+        </Route>
       </div>
-      
-      
       <Footer />
-
     </div>
   );
 }

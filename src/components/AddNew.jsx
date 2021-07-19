@@ -32,7 +32,6 @@ export default function AddNew() {
       ...prevInput,
       [name]: value,
     }))
-    console.log(input)
   }
 
   const handleSubmit = async (e) => {
@@ -60,8 +59,11 @@ export default function AddNew() {
       togglePopup()
     } else {
       const res = await axios.post(URL, { fields: input }, { headers })
-      console.log(res)
-      history.push("/")
+      if (res) {
+        history.push("/")
+      } else {
+        return <Popup message="Item could not be created. Please try again" />
+      }
     }
 
   }
@@ -78,9 +80,6 @@ export default function AddNew() {
           <label>Show</label>
           <input type="checkbox" name="movie" value="false" onChange={handleChange} />
         </div>
-
-        <br />
-        {/* <label>Title:</label> */}
         <br />
         <input
           type="text"
@@ -90,8 +89,6 @@ export default function AddNew() {
           placeholder="Title"
         />
         <br />
-        {/* <label>Year:</label> */}
-        <br />
         <input
           type="text"
           name="year"
@@ -100,12 +97,9 @@ export default function AddNew() {
           placeholder="Year"
         />
         <br />
-        {/* <label>Genre:</label> */}
-        <br />
         <select
           type="text"
           name="genre"
-          // value="genre"
           defaultValue=""
           onChange={handleChange}
           placeholder="genre"
@@ -123,8 +117,6 @@ export default function AddNew() {
           <option value="other" >Other</option>
         </select>
         <br />
-        {/* <label>Poster URL:</label> */}
-        <br />
         <input
           type="text"
           name="poster"
@@ -132,8 +124,6 @@ export default function AddNew() {
           onChange={handleChange}
           placeholder="Poster url"
         />
-        <br />
-        {/* <label>IMDB Link:</label> */}
         <br />
         <input
           type="text"
