@@ -12,6 +12,11 @@ export default function Shows() {
   useEffect(() => {
     const fetchShows = async () => {
       const res = await axios.get(URL, { headers })
+      res.data.records.sort(function (a, b) {
+        if (a.fields.title < b.fields.title) return -1
+        if (a.fields.title > b.fields.title) return 1
+        return 0
+      })
       setShows(res.data.records.filter(show => {
         if (show.fields.movie === "false") {
           return show

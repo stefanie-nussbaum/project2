@@ -13,6 +13,12 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(URL, { headers })
+      // sort res alphabetically
+      res.data.records.sort(function (a, b) {
+        if (a.fields.title < b.fields.title) return -1
+        if (a.fields.title > b.fields.title) return 1
+        return 0
+      })
       setMultimedia(res.data.records)
     }
     fetchData()

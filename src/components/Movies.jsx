@@ -12,6 +12,11 @@ export default function Movies() {
   useEffect(() => {
     const fetchMovies = async () => {
       const res = await axios.get(URL, { headers })
+      res.data.records.sort(function (a, b) {
+        if (a.fields.title < b.fields.title) return -1
+        if (a.fields.title > b.fields.title) return 1
+        return 0
+      })
       setMovies(res.data.records.filter(movie => {
         if (movie.fields.movie === "true") {
           return movie

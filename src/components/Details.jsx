@@ -19,9 +19,9 @@ export default function Details() {
   }, [id])
 
   useEffect(() => {
-    if (media.fields?.netflixOrHulu === 1) {
+    if (media.fields?.netflixOrHulu === "1") {
       setStreaming("Available on Netflix")
-    } else if (media.fields?.netflixOrHulu === 2) {
+    } else if (media.fields?.netflixOrHulu === "2") {
       setStreaming("Available on Hulu")
     }
   }, [media])
