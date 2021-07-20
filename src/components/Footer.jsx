@@ -14,6 +14,5 @@ export default function Footer() {
         </Link>
       </div>
     </div>
-
   )
 }

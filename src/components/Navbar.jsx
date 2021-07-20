@@ -18,7 +18,6 @@ export default function Navbar() {
           Add New
         </Link>
       </nav>
-
     </div>
   )
 }

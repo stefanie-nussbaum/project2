@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import DropdownGenre from './DropdownGenre'
 import { URL, headers } from "../services"
 import axios from 'axios'
 import Popup from './Popup'
@@ -65,7 +64,6 @@ export default function AddNew() {
         return <Popup message="Item could not be created. Please try again" />
       }
     }
-
   }
 
   return (

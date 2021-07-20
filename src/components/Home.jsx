@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(URL, { headers })
-      // sort res alphabetically
+      // sort res alphabetically by title; help from https://stackoverflow.com/questions/54298232/sorting-an-array-of-objects-alphabetically
       res.data.records.sort(function (a, b) {
         if (a.fields.title < b.fields.title) return -1
         if (a.fields.title > b.fields.title) return 1
