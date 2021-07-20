@@ -28,16 +28,15 @@ Watch party will keep track of the movies or shows you would like to watch soon.
   "id": "reccniENsTeNmZrlZ",
   "fields": {
     "title": "Bob's Burgers",
-    "genre": "Animation",
+    "genre": "animation",
     "year": "2011",
-    "netflix": "false",
+    "movie": "false",
+    "netflixOrHulu": "2",
     "poster": "https://fanart.tv/fanart/tv/194031/tvposter/bobs-burgers-55e43d58c600b.jpg",
-    "imdbLink": "https://www.imdb.com/title/tt1561755/",
-    "hulu": "true",
-    "movieOrShow": "show"
+    "imdbLink": "https://www.imdb.com/title/tt1561755/"
   },
   "createdTime": "2021-07-13T01:11:03.000Z"
-}
+},
 ```
 
 ### MVP/PostMVP
@@ -65,33 +64,35 @@ Watch party will keep track of the movies or shows you would like to watch soon.
 | July 14    | Core App Structure / build out components                        | Complete   |
 | July 15    | All routing and linking / get and post requests / render to page | Complete   |
 | July 16    | Style all components                                             | Complete   |
-| July 19    | Additional Styling / Post MVP                                    | Incomplete |
+| July 19    | Additional Styling / Post MVP                                    | Complete   |
 | July 20    | Presentations                                                    | Incomplete |
 
 ## Timeframes
 
-| Component                                  | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| Create app structure                       |    H     |      1hrs      |    0.5hrs     |   0.5hrs    |
-| Get airtable info and keys established     |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Create some starting Airtable data         |    M     |      2hrs      |     1hrs      |    0hrs     |
-| Create component files                     |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
-| Set up browser router/link capability      |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
-| Populate and link components               |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
-| Successful get request of data             |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Render data from get request to the page   |    H     |      2hrs      |     3hrs      |    0hrs     |
-| Filter movie data                          |    H     |      2hrs      |    1.5hrs     |    0hrs     |
-| Filter show data                           |    H     |      2hrs      |     1hrs      |    0hrs     |
-| create submit form component               |    H     |      1hrs      |     3hrs      |    0hrs     |
-| Successful post request to data            |    H     |      1hrs      |     1hrs      |    0hrs     |
-| Style navbar/header                        |    M     |      3hrs      |     2hrs      |    0hrs     |
-| Style movie component                      |    M     |      3hrs      |     3hrs      |    3hrs     |
-| Style lists of shows/movies                |    M     |      3hrs      |     4hrs      |    4hrs     |
-| Responsive Design                          |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Loading animations                         |    L     |      2hrs      |     2hrs      |    2hrs     |
-| Indication of successful new item creation |    L     |      3hrs      |     0hrs      |    0hrs     |
-| Delete feature                             |    L     |      2hrs      |    0.5hrs     |    0hrs     |
-| Total                                      |    H     |     37hrs      |     15hrs     |    0hrs     |
+| Component                                            | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Create app structure                                 |    H     |      1hrs      |    0.5hrs     |   0.5hrs    |
+| Get airtable info and keys established               |    H     |      2hrs      |     1hrs      |    1hrs     |
+| Create some starting Airtable data                   |    M     |      2hrs      |     2hrs      |    2hrs     |
+| Create component files                               |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
+| Set up browser router/link capability                |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
+| Populate and link components                         |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Successful get request of data                       |    H     |      2hrs      |     1hrs      |    1hrs     |
+| Render data from get request to the page             |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Filter movie data                                    |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Filter show data                                     |    H     |      2hrs      |     1hrs      |    1hrs     |
+| create submit form component                         |    H     |      1hrs      |     3hrs      |    3hrs     |
+| Successful post request to data                      |    H     |      1hrs      |     3hrs      |    3hrs     |
+| Style navbar/header                                  |    M     |      3hrs      |    2.5hrs     |   2.5hrs    |
+| Style movie component                                |    M     |      3hrs      |     3hrs      |    3hrs     |
+| Style lists of shows/movies                          |    M     |      3hrs      |     4hrs      |    4hrs     |
+| Responsive Design                                    |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Loading animations                                   |    L     |      2hrs      |     2hrs      |    2hrs     |
+| (Removed) Indication of successful new item creation |    L     |      3hrs      |     0hrs      |    0hrs     |
+| Delete feature                                       |    L     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| (Added) Rerouting with useHistory after post/delete  |    L     |      N/A       |    1.5hrs     |   1.5hrs    |
+| (Added) Creating/styling footer                      |    L     |      N/A       |     1hrs      |    1hrs     |
+| Total                                                |    H     |     37hrs      |     37hrs     |    37hrs    |
 
 ## SWOT Analysis
 
