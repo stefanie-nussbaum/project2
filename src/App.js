@@ -7,13 +7,8 @@ import Movies from "./components/Movies"
 import Shows from './components/Shows'
 import AddNew from "./components/AddNew"
 import Details from "./components/Details"
-import { useEffect } from 'react';
 
 function App() {
-
-  useEffect(() => {
-    document.title = "Watch Party"
-  }, [])
 
   return (
     <div className="App">
