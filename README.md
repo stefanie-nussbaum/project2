@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Watch Party
+[Watch Party](https://watch-party-by-stefanie-nussbaum.netlify.app/)
 
 ## Project Description
 
